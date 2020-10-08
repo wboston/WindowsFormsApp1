@@ -7,6 +7,16 @@ namespace WindowsFormsApp1
 {
     class GameObjects
     {
+
+    }
+
+    class User : Base
+    {
+
+        public void move ()
+        {
+
+        }
     }
 
     class Base
