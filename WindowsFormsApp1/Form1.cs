@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
                     // Call Pause Menu overlay
                     break;
 
-                case Keys.Right:
+                case Keys.Right: 
                     break;
                 case Keys.Left:
                     break;
@@ -57,6 +57,38 @@ namespace WindowsFormsApp1
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
+            //stop moving the user
+            // need to impliment a moveX MoveY check (-1,0,1) to avoid stickey keys
+           
+           
+            ///Stickey keys function. 
+            /// if move is -1 and button pressed is left/down then stop moving
+            /// if move is 0 do nothing
+            /// if move is 1 and button pressed is right/up then stop moving
+            /// else do nothing bc correct key was not pressed 
+            /// *to stop user from lifting the oposite key and stopping movement*
+            
+            switch (e.KeyData)
+            {
+                case Keys.Right:
+                    break;
+                case Keys.Left:
+                    break;
+                case Keys.Up:
+                    break;
+                case Keys.Down:
+                    break;
+
+                case Keys.W:
+                    break;
+                case Keys.S:
+                    break;
+                case Keys.A:
+                    break;
+                case Keys.D:
+                    break;
+            }
+
 
         }
     }
