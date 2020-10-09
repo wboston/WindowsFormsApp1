@@ -16,6 +16,7 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
+            CreateBitmapAtRuntime();
         }
 
         private void Form1_KeyDown(object sender, KeyEventArgs e)

@@ -56,7 +56,6 @@ namespace WindowsFormsApp1
         {
             pictureBox1.Size = new Size(this.Width, this.Height);
 
-
             this.Controls.Add(pictureBox1);
 
             Bitmap flag = new Bitmap(this.Width, this.Height);
