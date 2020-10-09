@@ -12,10 +12,58 @@ namespace WindowsFormsApp1
 
     class User : Base
     {
+        public override void MoveX(int x)
+        {
+            throw new NotImplementedException();
+        }
 
-        public void move ()
+        public override void MoveY(int y)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool reset()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool StopMoveX(int x)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool StopMoveY(int y)
         {
 
+            throw new NotImplementedException();
+        }
+    }
+
+    class Target : Base
+    {
+        public override void MoveX(int x)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void MoveY(int y)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool reset()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool StopMoveX(int x)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override bool StopMoveY(int y)
+        {
+            throw new NotImplementedException();
         }
     }
 
@@ -37,7 +85,7 @@ namespace WindowsFormsApp1
         protected double XSpeed { get; set; }
         protected double YSpeed { get; set; }
 
-        Base()
+        public Base()
         {
             Height = 5;
             Width = 5;
@@ -48,13 +96,12 @@ namespace WindowsFormsApp1
             Y = 0;
             XSpeed = 1;
         }
-        Base(double height, double width, Brush color)
+
+        public Base(double height, double width, Brush color)
         {
             Height = height;
             Width = width;
             Color = color;
-
-            
         }
 
         public void Init(int x_pos, int y_pos, int x_speed, int y_speed)
