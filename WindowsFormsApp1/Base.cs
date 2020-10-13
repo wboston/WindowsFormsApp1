@@ -40,7 +40,7 @@ namespace WindowsFormsApp1
             IsMovingY = 0;
         }
 
-        public Base(double height, double width, Brush color)
+        public Base(int height, int width, Brush color)
         {
             Height = height;
             Width = width;
