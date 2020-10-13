@@ -12,19 +12,24 @@ namespace WindowsFormsApp1
 
     class User : Base
     {
-        public User()
+
+        public void draw(Graphics GameGraphics)
         {
-            Height = 10;
-            Width = 11;
-            Color = Brushes.Blue;
-
-
+            GameGraphics.FillRectangle(Color, X, Y, Width, Height);
         }
 
-        public void draw()
+        public void update()
         {
-
+            if(MovingX != 0) // is it -1 or 1
+            {
+                X = X + (XSpeed * MovingX);
+            }
+            if(MovingY != 0) // is it -1 or 1
+            {
+                Y = Y + (YSpeed * MovingY);
+            }
         }
+
         public override void MoveX(int x)
         {
             throw new NotImplementedException();
