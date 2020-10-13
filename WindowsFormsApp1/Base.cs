@@ -67,10 +67,10 @@ namespace WindowsFormsApp1
 
             X = 0;
             XSpeed = 1;
-            IsMovingX = 0;
+            MovingX = 0;
             Y = 0;
             XSpeed = 1;
-            IsMovingY = 0;
+            MovingY = 0;
         }
 
         public Base(int height, int width, Brush color, int x_speed, int y_speed)
@@ -85,8 +85,8 @@ namespace WindowsFormsApp1
             Y = 0;
             XSpeed = x_speed;
             YSpeed = y_speed;
-            IsMovingX = 0;
-            IsMovingY = 0;
+            MovingX = 0;
+            MovingY = 0;
         }
 
         public void Init(int x_pos, int y_pos, int x_speed, int y_speed)
