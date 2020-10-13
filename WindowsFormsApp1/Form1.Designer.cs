@@ -7,6 +7,11 @@ namespace WindowsFormsApp1
     partial class Form1
     {
         /// <summary>
+        /// PictureBox for all game graphics
+        /// </summary>
+        PictureBox pictureBox1 = new PictureBox();
+
+        /// <summary>
         ///  Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
@@ -38,7 +43,8 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(800, 1000);
             this.Name = "Form1";
             this.Text = "Form1";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
@@ -49,9 +55,19 @@ namespace WindowsFormsApp1
 
         #endregion
 
+        public void Init_PictureBoxAtRuntime()
+        {
+            pictureBox1.Size = new Size(this.Width, this.Height);
+            this.Controls.Add(pictureBox1);
+
+            Graphics GameGraphics = Graphics.FromImage(new Bitmap(this.Width, this.Height)); // init display window
 
 
-        PictureBox pictureBox1 = new PictureBox();
+        }
+
+
+
+        
         public void CreateBitmapAtRuntime()
         {
             pictureBox1.Size = new Size(this.Width, this.Height);
